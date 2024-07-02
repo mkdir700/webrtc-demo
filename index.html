@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Demo</title>
+    <style>
+        .Card {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex: auto;
+        }
+
+        .VideoDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 50vh;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Action {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WebRTC Demo</h1>
+    <div class="Card">
+        <div class="VideoDiv">
+            <div style="background-color: aqua;">
+                <video id="localVideo" autoplay playsinline></video>
+            </div>
+            <span>localVideo</span>
+        </div>
+        <div class="VideoDiv">
+            <div style="background-color: bisque;">
+                <video id="remoteVideo" autoplay playsinline></video>
+            </div>
+            <span>remoteVideo</span>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="Action">
+        <button id="startButton">Start</button>
+        <button id="callButton">Call</button>
+        <button id="hangupButton">Hang Up</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
